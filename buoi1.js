@@ -103,4 +103,20 @@
 // let b = null
 // console.log(a + b)
 
+// 9 : Vòng lặp
+
+const arrNames = ["Tèo","Tí","Hoa","Tuấn"]
+
+const teo = {
+    name : "Nguyễn Văn Tèo",
+    age : 10,
+}
+
+// for (const name of arrNames) {
+//     console.log(name)
+// }
+
+for (const key in arrNames) {
+   console.log(key)
+}
 
