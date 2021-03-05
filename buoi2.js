@@ -69,23 +69,64 @@
 //     },
 // ])
 
-const arrNums = [1,2,3,4,5,6,7,8,9,10]
+// const arrNums = [1,2,3,4,5,6,7,8,9,10]
 
-Array.prototype.myMap = function(fn) {
-    let newArr = []
-    for (const value of this) {
-        newArr.push(fn(value))
-    }
-    return newArr
+// Array.prototype.myMap = function(fn) {
+//     let newArr = []
+//     for (const value of this) {
+//         newArr.push(fn(value))
+//     }
+//     return newArr
+// }
+
+// const newArrNums = arrNums.map(function(number) {
+//     return number*2
+// })
+// console.log(newArrNums)
+
+
+// 16 : Hàm filter
+// 1 - Thay đổi kích thước , không thay đổi giá trị
+// 2 - Không gắn sự thay đổi vào mảng cũ, gắn sự thay đổi vào mảng mới
+
+// const arrNames = ["Hao" ,"Tuan" ,"Loan", "Hau"]
+
+// const newArrNames = arrNames.filter(function(name){
+//     if(name.length > 3 ){
+//         return false
+//     }
+//     return true
+// })
+
+// console.log(newArrNames)
+
+
+// Array.prototype.myFilter = function(fn) {
+//     let newArr = []
+//     for (const value of this) {
+//         const dk = fn(value)
+//         if (dk) {
+//             newArr.push(value)
+//         }
+//     }
+//     return newArr
+// }
+
+// const arrNames = ["Hao" ,"Tuan" ,"Loan", "Hau"]
+
+// const newArrNames = arrNames.myFilter(function(name){
+//     if(name.length > 3 ){
+//         return false
+//     }
+//     return true
+// })
+// console.log(newArrNames)
+
+
+const teo = {
+    name : "Nguyen Van Teo",
+    age : 10
 }
 
-const newArrNums = arrNums.myMap(function(number) {
-    return number*2
-})
-console.log(newArrNums)
-
-
-
-
-
-
+delete teo.age
+console.log(teo)
