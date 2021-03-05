@@ -116,7 +116,17 @@ const teo = {
 //     console.log(name)
 // }
 
-for (const key in arrNames) {
-   console.log(key)
+// for (const key in arrNames) {
+//    console.log(key)
+// }
+
+// for of 
+function multiply(arr){
+    let result = 1
+    for (const value of arr){
+        result *= value
+    }
+    return result
 }
 
+console.log(multiply([2,3,4]))
