@@ -16,3 +16,22 @@
 // arrNums.splice(-2,1)
 
 // console.log(arrNums)
+
+// 14 : Higher order function : phương thức sẽ nhận giá trị là phương
+
+function tinhTong(arr , fn){
+    let result = 0
+    for (const value of arr) {
+        result += value
+    }
+    fn(result)
+}
+
+tinhTong([1,2,3,4],function() {
+    console.log()
+})
+
+
+
+
+
