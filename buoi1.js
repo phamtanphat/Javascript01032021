@@ -121,12 +121,46 @@ const teo = {
 // }
 
 // for of 
-function multiply(arr){
-    let result = 1
-    for (const value of arr){
-        result *= value
+// function multiply(arr){
+//     let result = 1
+//     for (const value of arr){
+//         result *= value
+//     }
+//     return result
+// }
+
+// console.log(multiply([2,3,4]))
+
+// for in
+const apartment = {
+    bedroom: {
+        area : 20,
+        bed: {
+            type : 'twin bed',
+            price : 10
+        }
     }
-    return result
 }
 
-console.log(multiply([2,3,4]))
+function getKey(obj){
+    for (const key in obj){
+        console.log(key)
+        for (const keyBedRoom in obj[key]){
+            console.log(keyBedRoom)
+            for (const keyBed in obj[key][keyBedRoom]){
+                console.log(keyBed)
+            }
+        }
+    }
+}
+// cách 2 : đê qụi
+// Nên chọn cách tường minh
+// function getKey(obj){
+//     for (const key in obj){
+//         console.log(key)
+//         if (typeof obj[key] === "object"){
+//             getKey(obj[key])
+//         }
+//     }
+// }
+getKey(apartment)
