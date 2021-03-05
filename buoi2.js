@@ -123,10 +123,33 @@
 // console.log(newArrNames)
 
 
-const teo = {
-    name : "Nguyen Van Teo",
-    age : 10
-}
+// const teo = {
+//     name : "Nguyen Van Teo",
+//     age : 10
+// }
 
-delete teo.age
-console.log(teo)
+// delete teo.age
+// console.log(teo)
+
+
+const listProducts = [
+    {id : 1 , category : 1 , name : 'Ti vi '},
+    {id : 2 , category : 1 , name : 'Tủ lạnh '},
+    {id : 3 , category : 3 , name : 'Chén bát'},
+    {id : 4 , category : 2 , name : 'Máy giặt'},
+]
+
+// strict equal
+function getProduct(category , listProducts){
+    const newListProducts = listProducts.filter(function(product){
+        if (product.category === category){
+            return true
+        }
+        return false
+    }).map(function(product){
+        delete product.category
+        return product
+    })
+    console.log(newListProducts)
+}
+getProduct(3,listProducts)
