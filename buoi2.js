@@ -19,17 +19,31 @@
 
 // 14 : Higher order function : phương thức sẽ nhận giá trị là phương
 
-function tinhTong(arr , fn){
-    let result = 0
-    for (const value of arr) {
-        result += value
-    }
-    fn(result)
-}
+// function tinhTong(arr , fn){
+//     let result = 0
+//     for (const value of arr) {
+//         result += value
+//     }
+//     fn(result)
+// }
 
-tinhTong([1,2,3,4],function() {
-    console.log()
+// tinhTong([1,2,3,4],function(result) {
+//     console.log(result)
+// })
+
+//15 : Hàm map (transform mảng)
+// 1 - Thay đổi giá trị của phần tử, không thay đổi kích thươc mảng
+// 2 - Không gắn sự thay đổi vào mảng cũ, gắn sự thay đổi vào mảng mới
+const arrNums = [1,2,3,4,5,6,7,8,9,10]
+
+const newArrNums = arrNums.map(function(number , index) {
+    return number*2
 })
+
+console.log(arrNums)
+console.log(newArrNums)
+
+
 
 
 
