@@ -43,33 +43,46 @@
 // console.log(arrNums)
 // console.log(newArrNums)
 
-function namesOnly(arr) {
-    const newArr = arr.map(function(person) {
-        return person.name
-    })
-    console.log(newArr)
+// function namesOnly(arr) {
+//     const newArr = arr.map(function(person) {
+//         return person.name
+//     })
+//     console.log(newArr)
+// }
+
+// namesOnly([
+//     {
+//         name:"Teo",
+//         age : 20
+//     },
+//     {
+//         name:"Ti",
+//         age : 5
+//     },
+//     {
+//         name:"Tun",
+//         age : 8
+//     },
+//     {
+//         name:"Tuan",
+//         age : 10
+//     },
+// ])
+
+const arrNums = [1,2,3,4,5,6,7,8,9,10]
+
+Array.prototype.myMap = function(fn) {
+    let newArr = []
+    for (const value of this) {
+        newArr.push(fn(value))
+    }
+    return newArr
 }
 
-namesOnly([
-    {
-        name:"Teo",
-        age : 20
-    },
-    {
-        name:"Ti",
-        age : 5
-    },
-    {
-        name:"Tun",
-        age : 8
-    },
-    {
-        name:"Tuan",
-        age : 10
-    },
-])
-
-
+const newArrNums = arrNums.myMap(function(number) {
+    return number*2
+})
+console.log(newArrNums)
 
 
 
