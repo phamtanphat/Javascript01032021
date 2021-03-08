@@ -155,7 +155,7 @@
 // getProduct(3,listProducts)
 
 // 17 : Hàm reduce
-const arrNums = [1,2,3,4,5]
+// const arrNums = [1,2,3,4,5]
 
 // 1 : Tính toán để trả về kết qua theo yêu cầu
 // 2 : Không ảnh hưởng tới mảng cũ
@@ -199,21 +199,21 @@ const arrNums = [1,2,3,4,5]
 
 // Bai tap kiem tra gia trị trùng : {a : 3 , b : 2 , c:1}
 
-const words = ["a", "b" , "c" ,"a" ,"b" ,"a"]
+// const words = ["a", "b" , "c" ,"a" ,"b" ,"a"]
 
-const object = words.reduce(function(accumulator , word){
-    // Kiểm tra key đã tồn tại trong object hay chưa
-    if(word in accumulator){
-        // Đã tồn tại trong object
-        accumulator[word] += 1
-    }else{
-        // Lần đầu xuất hiện
-        accumulator[word] = 1
-    }
-    return accumulator
-},{})
+// const object = words.reduce(function(accumulator , word){
+//     // Kiểm tra key đã tồn tại trong object hay chưa
+//     if(word in accumulator){
+//         // Đã tồn tại trong object
+//         accumulator[word] += 1
+//     }else{
+//         // Lần đầu xuất hiện
+//         accumulator[word] = 1
+//     }
+//     return accumulator
+// },{})
 
-console.log(object)
+// console.log(object)
 
 // const teo = {}
 
