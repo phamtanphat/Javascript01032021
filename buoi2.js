@@ -160,7 +160,7 @@ const arrNums = [1,2,3,4,5]
 // 1 : Tính toán để trả về kết qua theo yêu cầu
 // 2 : Không ảnh hưởng tới mảng cũ
 
-const result = arrNums.reduce(function(accumulator , currentValue) {
+// const result = arrNums.reduce(function(accumulator , currentValue) {
     // Vòng lặp 1 : 
     // accumulator = init
     // current = 1 (Phần tử đầu tiên trong mảng)
@@ -168,7 +168,30 @@ const result = arrNums.reduce(function(accumulator , currentValue) {
     // Vòng lặp 2 :
     // accumulator = kết quả mà vòng lặp thứ 1 trả về
     // console.log(accumulator, currentValue)
-    return accumulator + currentValue;
-},0)
+//     return accumulator + currentValue;
+// },0)
 
-console.log(result)
+// console.log(result)
+
+// Bai tap ví dụ
+
+const voters = [
+    {name : 'Teo' , age : 30 , voted : true},
+    {name : 'Ti' , age : 32 , voted : false},
+    {name : 'Tun' , age : 33 , voted : true},
+    {name : 'Hoa' , age : 31 , voted : false},
+    {name : 'Lan' , age : 35 , voted : false},
+    {name : 'Hue' , age : 36 , voted : true},
+]
+
+function totalVotes(arr) {
+    const total = arr.reduce(function(accumulator , voter){
+            if(voter.voted){
+                accumulator += 1
+            }
+            return accumulator
+    },0)
+    console.log(total)
+}
+
+totalVotes(voters)
