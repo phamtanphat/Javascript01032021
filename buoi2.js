@@ -132,24 +132,43 @@
 // console.log(teo)
 
 
-const listProducts = [
-    {id : 1 , category : 1 , name : 'Ti vi '},
-    {id : 2 , category : 1 , name : 'Tủ lạnh '},
-    {id : 3 , category : 3 , name : 'Chén bát'},
-    {id : 4 , category : 2 , name : 'Máy giặt'},
-]
+// const listProducts = [
+//     {id : 1 , category : 1 , name : 'Ti vi '},
+//     {id : 2 , category : 1 , name : 'Tủ lạnh '},
+//     {id : 3 , category : 3 , name : 'Chén bát'},
+//     {id : 4 , category : 2 , name : 'Máy giặt'},
+// ]
 
-// strict equal
-function getProduct(category , listProducts){
-    const newListProducts = listProducts.filter(function(product){
-        if (product.category === category){
-            return true
-        }
-        return false
-    }).map(function(product){
-        delete product.category
-        return product
-    })
-    console.log(newListProducts)
-}
-getProduct(3,listProducts)
+// // strict equal
+// function getProduct(category , listProducts){
+//     const newListProducts = listProducts.filter(function(product){
+//         if (product.category === category){
+//             return true
+//         }
+//         return false
+//     }).map(function(product){
+//         delete product.category
+//         return product
+//     })
+//     console.log(newListProducts)
+// }
+// getProduct(3,listProducts)
+
+// 17 : Hàm reduce
+const arrNums = [1,2,3,4,5]
+
+// 1 : Tính toán để trả về kết qua theo yêu cầu
+// 2 : Không ảnh hưởng tới mảng cũ
+
+const result = arrNums.reduce(function(accumulator , currentValue) {
+    // Vòng lặp 1 : 
+    // accumulator = init
+    // current = 1 (Phần tử đầu tiên trong mảng)
+
+    // Vòng lặp 2 :
+    // accumulator = kết quả mà vòng lặp thứ 1 trả về
+    // console.log(accumulator, currentValue)
+    return accumulator + currentValue;
+},0)
+
+console.log(result)
