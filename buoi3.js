@@ -57,3 +57,34 @@
 //   run(mouse.run.bind(mouse))
   // 'run...'
   // 'Mickey is runn'
+
+// 21 : A row function (Phương thức 1 dòng)
+
+// const arr = [1,2,3]
+
+// const newArr = arr.map(function(num) {
+//     return num * 2
+// })
+
+// const newArr2 = arr.map((num) => {
+//     return num * 2
+// })
+
+// console.log(newArr , newArr2)
+
+const teo = {
+    name : "Teo",
+    age : 10,
+    showName : function () {
+        let fn = () => {
+            
+            let fn2 = () => {
+                console.log(this.name)
+            }
+            fn2()
+        }
+        fn()
+    }
+}
+teo.showName()
+
