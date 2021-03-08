@@ -175,23 +175,48 @@ const arrNums = [1,2,3,4,5]
 
 // Bai tap ví dụ
 
-const voters = [
-    {name : 'Teo' , age : 30 , voted : true},
-    {name : 'Ti' , age : 32 , voted : false},
-    {name : 'Tun' , age : 33 , voted : true},
-    {name : 'Hoa' , age : 31 , voted : false},
-    {name : 'Lan' , age : 35 , voted : false},
-    {name : 'Hue' , age : 36 , voted : true},
-]
+// const voters = [
+//     {name : 'Teo' , age : 30 , voted : true},
+//     {name : 'Ti' , age : 32 , voted : false},
+//     {name : 'Tun' , age : 33 , voted : true},
+//     {name : 'Hoa' , age : 31 , voted : false},
+//     {name : 'Lan' , age : 35 , voted : false},
+//     {name : 'Hue' , age : 36 , voted : true},
+// ]
+// type script : Dự án lớn nên biết typescript
 
-function totalVotes(arr) {
-    const total = arr.reduce(function(accumulator , voter){
-            if(voter.voted){
-                accumulator += 1
-            }
-            return accumulator
-    },0)
-    console.log(total)
-}
+// function totalVotes(arr) {
+//     const total = arr.reduce(function (accumulator, voter){
+//             if(voter.voted){
+//                 accumulator += 1
+//             }
+//             return accumulator
+//     },0)
+//     console.log(total)
+// }
 
-totalVotes(voters)
+// totalVotes(voters)
+
+// Bai tap kiem tra gia trị trùng : {a : 3 , b : 2 , c:1}
+
+const words = ["a", "b" , "c" ,"a" ,"b" ,"a"]
+
+const object = words.reduce(function(accumulator , word){
+    // Kiểm tra key đã tồn tại trong object hay chưa
+    if(word in accumulator){
+        // Đã tồn tại trong object
+        accumulator[word] += 1
+    }else{
+        // Lần đầu xuất hiện
+        accumulator[word] = 1
+    }
+    return accumulator
+},{})
+
+console.log(object)
+
+// const teo = {}
+
+// teo["name"] = "Nguyen Van Teo"
+// console.log(teo)
+
