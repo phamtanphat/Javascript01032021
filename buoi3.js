@@ -72,19 +72,35 @@
 
 // console.log(newArr , newArr2)
 
-const teo = {
-    name : "Teo",
-    age : 10,
-    showName : function () {
-        let fn = () => {
+// const teo = {
+//     name : "Teo",
+//     age : 10,
+//     showName : function () {
+//         let fn = () => {
             
-            let fn2 = () => {
-                console.log(this.name)
-            }
-            fn2()
-        }
-        fn()
-    }
+//             let fn2 = () => {
+//                 console.log(this.name)
+//             }
+//             fn2()
+//         }
+//         fn()
+//     }
+// }
+// teo.showName()
+
+
+// 22 : Template string : `` ( back tick )
+// let name = "teo"
+// const str = `Hello . ${name}`
+// console.log(str)
+
+// 23 : rest ...
+function tinhTong(...nums) {
+    const result = nums.reduce((accumulator , num) => {
+        return accumulator + num
+    },0)
+    console.log(result)
 }
-teo.showName()
+tinhTong(1,2,3,4,5)
+
 
